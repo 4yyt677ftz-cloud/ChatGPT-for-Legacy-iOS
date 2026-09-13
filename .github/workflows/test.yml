@@ -14,13 +14,13 @@ jobs:
       - name: Show Xcode Version
         run: xcodebuild -version
 
-      - name: Show Resolved Build Settings
+            - name: Show Resolved Build Settings
         run: |
           xcodebuild \
             -project ChatGPT.xcodeproj \
             -scheme ChatGPT \
             -configuration Release \
-            -showBuildSettings | \
+            -showBuildSettings
             grep -E 'IPHONEOS_DEPLOYMENT_TARGET|ARCHS|VALID_ARCHS|SDKROOT'
 
       - name: Build
